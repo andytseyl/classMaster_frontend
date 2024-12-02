@@ -10,7 +10,7 @@ export default function Navbar({ children }) {
     { path: "/dashboard/participant", label: "Participant" },
     { path: "/dashboard/program", label: "Programs" },
     { path: "/dashboard/payment_v2", label: "Payment" },
-    { path: "/dashboard/calender", label: "Calender" },
+    { path: "/dashboard/calendar", label: "Calendar" },
     { path: "/dashboard/profile", label: "Profile" },
   ];
 

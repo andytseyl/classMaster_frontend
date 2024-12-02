@@ -377,14 +377,28 @@ const Dashboard = () => {
         .flat()
     : [["TypeA", 0]];
 
-  const copmareMonthParti =
+  const compareMonthParti =
     dashboardData.currentMonthParticipant -
       dashboardData.lastMonthParticipant || "--";
-  const compareMonthPartiPercent =
-    (dashboardData.currentMonthParticipant /
-      dashboardData.lastMonthParticipant -
-      1) *
-      100 || "--";
+  const compareMonthPartiPercent = () => {
+    // Check if both values are valid numbers and not zero
+    if (
+      dashboardData.currentMonthParticipant &&
+      dashboardData.lastMonthParticipant
+    ) {
+      // Calculate percentage change
+      const percentChange =
+        (dashboardData.currentMonthParticipant /
+          dashboardData.lastMonthParticipant -
+          1) *
+        100;
+
+      // Round to whole number
+      return Math.round(percentChange) || "--";
+    }
+
+    return "--";
+  };
   const compareMonthAvgProfit =
     Math.floor(
       dashboardData.currentMonthAvgProfit - dashboardData.lastMonthAvgProfit
@@ -413,17 +427,14 @@ const Dashboard = () => {
                 {dashboardData.currentMonthParticipantFormatted}
               </div>
               <div className="stat-desc">
-                {copmareMonthParti >= 0 ? (
+                {compareMonthParti >= 0 ? (
                   <span className="text-green-500">
-                    ↗︎ {copmareMonthParti} (+
-                    {compareMonthPartiPercent}
-                    %)
+                    ↗︎ {compareMonthParti} (+{compareMonthPartiPercent()}%)
                   </span>
                 ) : (
                   <span className="text-red-500">
-                    ↘ {isNaN(copmareMonthParti) ? "--" : copmareMonthParti} (
-                    {compareMonthPartiPercent}
-                    %)
+                    ↘ {isNaN(compareMonthParti) ? "--" : compareMonthParti} (
+                    {compareMonthPartiPercent()}%)
                   </span>
                 )}
               </div>
