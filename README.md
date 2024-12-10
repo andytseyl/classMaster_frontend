@@ -1,9 +1,11 @@
-<h1>Class Master</h1>
+# Class Master
+
 Welcome to booking sysytem project! Feel free to create your account to try the booking system.
 <br/>
-https://booking-system-frontend.vercel.app/home
+https://class-master-frontend.vercel.app/home
 
-<h3>Dashboard - Merchant's company service</h3>
+### Dashboard - Merchant's company service
+
 <p>Merchant can manage their business through dashboard's functions.</p>
 
 ![image](https://github.com/user-attachments/assets/8bbda40f-d608-4def-84c4-c8a8e887638b)
@@ -14,7 +16,8 @@ https://booking-system-frontend.vercel.app/home
 <img src="https://github.com/user-attachments/assets/d89a3f00-70ba-4ae6-a84e-288a19c0252b" width="249" alt="calendar"/>
 <img src="https://github.com/user-attachments/assets/104230b3-4e59-49ac-bee2-ccb5500bdc8e" width="249" alt="profile"/>
 
-<h3>Booking System - Merchant's client service</h3>
+### Booking System - Merchant's client service
+
 <p>Merchant can share this page to their client for program enrolment.</p>
 
 ![image](https://github.com/user-attachments/assets/da76b5de-7a9b-4557-b2d8-f882e08d2677)
